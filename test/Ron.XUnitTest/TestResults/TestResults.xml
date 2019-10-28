@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies timestamp="10/28/2019 18:37:35">
+  <assembly name="D:\MyGitHub\RonTest\test\Ron.XUnitTest\bin\Debug\netcoreapp2.2\Ron.XUnitTest.dll" run-date="2019-10-28" run-time="18:37:35" total="8" passed="8" failed="0" skipped="0" time="0.357" errors="0">
+    <errors />
+    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Ron.XUnitTest._BlogControllerTest" time="0.011">
+      <test name="Ron.XUnitTest._BlogControllerTest.List" type="Ron.XUnitTest._BlogControllerTest" method="List" time="0.0080000" result="Pass">
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest._BlogControllerTest.Add" type="Ron.XUnitTest._BlogControllerTest" method="Add" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest._BlogControllerTest.Edit" type="Ron.XUnitTest._BlogControllerTest" method="Edit" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest._BlogControllerTest.Detail(id: 1)" type="Ron.XUnitTest._BlogControllerTest" method="Detail" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+    </collection>
+    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Ron.XUnitTest.BlogControllerTest" time="0.346">
+      <test name="Ron.XUnitTest.BlogControllerTest.Add" type="Ron.XUnitTest.BlogControllerTest" method="Add" time="0.2970000" result="Pass">
+        <output>{"errors":{"Title":["The Title field is required."],"Content":["The Content field is required."]},"title":"One or more validation errors occurred.","status":400,"traceId":"0HLQRIBCSGF6T"}
+
+</output>
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest.BlogControllerTest.Edit" type="Ron.XUnitTest.BlogControllerTest" method="Edit" time="0.0130000" result="Pass">
+        <output>{"errors":{"Title":["The Title field is required."],"Content":["The Content field is required."]},"title":"One or more validation errors occurred.","status":400,"traceId":"0HLQRIBCSGF6U"}
+
+</output>
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest.BlogControllerTest.List" type="Ron.XUnitTest.BlogControllerTest" method="List" time="0.0180000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
+
+</output>
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest.BlogControllerTest.Detail(id: 1)" type="Ron.XUnitTest.BlogControllerTest" method="Detail" time="0.0180000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
+
+</output>
+        <traits />
+      </test>
+    </collection>
+  </assembly>
+</assemblies>

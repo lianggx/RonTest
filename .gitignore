@@ -3,3 +3,7 @@
 ################################################################################
 
 /src/Ron.Blogs/bin/Debug/netcoreapp2.2
+/src/Ron.Blogs/obj
+/test/Ron.XUnitTest/bin/Debug/netcoreapp2.2
+/test/Ron.XUnitTest/obj
+/.vs/RonTest
