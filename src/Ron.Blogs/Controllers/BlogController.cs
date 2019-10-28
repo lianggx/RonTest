@@ -21,7 +21,7 @@ namespace Ron.Blogs.Controllers
         [HttpGet("detail/{id}")]
         public IActionResult Detail(int id)
         {
-            return APIReturn.OK;
+            return APIReturn.NotFound;
         }
 
         [HttpPost("list")]
