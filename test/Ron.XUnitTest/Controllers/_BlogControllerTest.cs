@@ -18,15 +18,17 @@ namespace Ron.XUnitTest
         public _BlogControllerTest(ITestOutputHelper output)
         {
             this.output = output;
-            this.blogController = new BlogController(new HttpClient());
+            this.blogController = new BlogController(new Blogs.BLL.BlogsBLL());
         }
 
         [Theory]
         [InlineData(1)]
+        [InlineData(5)]
+        [InlineData(100)]
         public void Detail(int id)
         {
             var result = (APIReturn)this.blogController.Detail(id);
-            Assert.Equal(0, result.Code);
+            Assert.NotEmpty(result.Data);
         }
 
         [Fact]
@@ -34,23 +36,23 @@ namespace Ron.XUnitTest
         {
             var result = (APIReturn)this.blogController.List(new PageViewModel { Page = 1, PageSize = 20 });
 
-            Assert.Equal(0, result.Code);
+            Assert.NotEmpty(result.Data);
         }
 
         [Fact]
         public void Add()
         {
-            var result = (APIReturn)this.blogController.Add(new BlogViewModel { Title = "", Content = "" });
+            var result = (APIReturn)this.blogController.Add(new BlogViewModel { Title = "测试Add的用例", Content = "这是测试Add的用例" });
 
-            Assert.Equal(0, result.Code);
+            Assert.NotNull(result.Data);
         }
 
         [Fact]
         public void Edit()
         {
-            var result = (APIReturn)this.blogController.Edit(new BlogViewModel { Id = 0, Title = "", Content = "" });
+            var result = (APIReturn)this.blogController.Edit(new BlogViewModel { Id = 11, Title = "测试Add的用例", Content = "这是测试Add的用例" });
 
-            Assert.Equal(0, result.Code);
+            Assert.NotNull(result.Data);
         }
     }
 }

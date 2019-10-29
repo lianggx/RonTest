@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Ron.Blogs.BLL;
 using Ron.Blogs.Extensions;
 
 namespace Ron.Blogs
@@ -46,7 +47,7 @@ namespace Ron.Blogs
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<HttpClient>();
+            services.AddSingleton<BlogsBLL>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

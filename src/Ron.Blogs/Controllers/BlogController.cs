@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Ron.Blogs.BLL;
 using Ron.Blogs.Models;
 
 namespace Ron.Blogs.Controllers
@@ -12,36 +13,45 @@ namespace Ron.Blogs.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private readonly HttpClient httpClient;
-        public BlogController(HttpClient httpClient)
+        private readonly BlogsBLL blogsBLL;
+        public BlogController(BlogsBLL blogsBLL)
         {
-            this.httpClient = httpClient;
+            this.blogsBLL = blogsBLL;
         }
 
         [HttpGet("detail/{id}")]
         public IActionResult Detail(int id)
         {
-            return APIReturn.NotFound;
+            var result = this.blogsBLL.List.FirstOrDefault(f => f.Id == id);
+            if (result == null)
+                return APIReturn.NotFound;
+
+            return APIReturn.OK.SetData("detail", result);
         }
 
         [HttpPost("list")]
         public IActionResult List([FromBody]PageViewModel model)
         {
-            return APIReturn.OK;
+            var result = this.blogsBLL.List.Skip(model.Page * model.PageSize).Take(model.PageSize).ToList();
+            return APIReturn.OK.SetData("list", result);
         }
 
         [HttpPost("add")]
         public IActionResult Add([FromBody] BlogViewModel model)
         {
-
-            return APIReturn.OK;
+            model.Id = this.blogsBLL.List.Count + 1;
+            this.blogsBLL.List.Add(model);
+            return APIReturn.OK.SetData("detail", model);
         }
 
         [HttpPost("edit")]
         public IActionResult Edit([FromBody] BlogViewModel model)
         {
+            var result = this.blogsBLL.List.FirstOrDefault(f => f.Id == model.Id);
+            if (result == null)
+                return APIReturn.NotFound;
 
-            return APIReturn.OK;
+            return APIReturn.OK.SetData("detail", model);
         }
     }
 }
