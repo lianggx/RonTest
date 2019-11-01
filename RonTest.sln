@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ron.XUnitTest", "test\Ron.XUnitTest\Ron.XUnitTest.csproj", "{C010CB41-36DB-4BF8-BDF3-DC60C86A0872}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9B571EF9-3F06-41A4-BDFD-C0868405DB31}"
+	ProjectSection(SolutionItems) = preProject
+		test\Ron.XUnitTest\Dockerfile = test\Ron.XUnitTest\Dockerfile
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DDE9CD9D-37F6-4440-B94F-FE9D3B71EAA9}"
 EndProject
