@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<assemblies timestamp="10/28/2019 18:37:35">
-  <assembly name="D:\MyGitHub\RonTest\test\Ron.XUnitTest\bin\Debug\netcoreapp2.2\Ron.XUnitTest.dll" run-date="2019-10-28" run-time="18:37:35" total="8" passed="8" failed="0" skipped="0" time="0.357" errors="0">
+<assemblies timestamp="11/04/2019 10:26:43">
+  <assembly name="D:\MyGitHub\RonTest\test\Ron.XUnitTest\bin\Debug\netcoreapp2.2\Ron.XUnitTest.dll" run-date="2019-11-04" run-time="10:26:43" total="12" passed="12" failed="0" skipped="0" time="0.383" errors="0">
     <errors />
-    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Ron.XUnitTest._BlogControllerTest" time="0.011">
-      <test name="Ron.XUnitTest._BlogControllerTest.List" type="Ron.XUnitTest._BlogControllerTest" method="List" time="0.0080000" result="Pass">
+    <collection total="6" passed="6" failed="0" skipped="0" name="Test collection for Ron.XUnitTest._BlogControllerTest" time="0.012">
+      <test name="Ron.XUnitTest._BlogControllerTest.List" type="Ron.XUnitTest._BlogControllerTest" method="List" time="0.0070000" result="Pass">
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest._BlogControllerTest.Detail(id: 100)" type="Ron.XUnitTest._BlogControllerTest" method="Detail" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest._BlogControllerTest.Detail(id: 5)" type="Ron.XUnitTest._BlogControllerTest" method="Detail" time="0.0010000" result="Pass">
+        <traits />
+      </test>
+      <test name="Ron.XUnitTest._BlogControllerTest.Detail(id: 1)" type="Ron.XUnitTest._BlogControllerTest" method="Detail" time="0.0010000" result="Pass">
         <traits />
       </test>
       <test name="Ron.XUnitTest._BlogControllerTest.Add" type="Ron.XUnitTest._BlogControllerTest" method="Add" time="0.0010000" result="Pass">
@@ -12,34 +21,55 @@
       <test name="Ron.XUnitTest._BlogControllerTest.Edit" type="Ron.XUnitTest._BlogControllerTest" method="Edit" time="0.0010000" result="Pass">
         <traits />
       </test>
-      <test name="Ron.XUnitTest._BlogControllerTest.Detail(id: 1)" type="Ron.XUnitTest._BlogControllerTest" method="Detail" time="0.0010000" result="Pass">
-        <traits />
-      </test>
     </collection>
-    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Ron.XUnitTest.BlogControllerTest" time="0.346">
-      <test name="Ron.XUnitTest.BlogControllerTest.Add" type="Ron.XUnitTest.BlogControllerTest" method="Add" time="0.2970000" result="Pass">
-        <output>{"errors":{"Title":["The Title field is required."],"Content":["The Content field is required."]},"title":"One or more validation errors occurred.","status":400,"traceId":"0HLQRIBCSGF6T"}
+    <collection total="6" passed="6" failed="0" skipped="0" name="Test collection for Ron.XUnitTest.BlogControllerTest" time="0.371">
+      <test name="Ron.XUnitTest.BlogControllerTest.Add" type="Ron.XUnitTest.BlogControllerTest" method="Add" time="0.2890000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{"detail":{"id":101,"title":"测试Add的用例","content":"这是测试Add的用例"}},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
 
 </output>
         <traits />
       </test>
-      <test name="Ron.XUnitTest.BlogControllerTest.Edit" type="Ron.XUnitTest.BlogControllerTest" method="Edit" time="0.0130000" result="Pass">
-        <output>{"errors":{"Title":["The Title field is required."],"Content":["The Content field is required."]},"title":"One or more validation errors occurred.","status":400,"traceId":"0HLQRIBCSGF6U"}
+      <test name="Ron.XUnitTest.BlogControllerTest.Edit" type="Ron.XUnitTest.BlogControllerTest" method="Edit" time="0.0170000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{"detail":{"id":10,"title":"修改测试Add的用例","content":"这是修改测试Add的用例"}},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
 
 </output>
         <traits />
       </test>
-      <test name="Ron.XUnitTest.BlogControllerTest.List" type="Ron.XUnitTest.BlogControllerTest" method="List" time="0.0180000" result="Pass">
-        <output>{"code":0,"message":"成功","data":{},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
+      <test name="Ron.XUnitTest.BlogControllerTest.Detail(id: 100)" type="Ron.XUnitTest.BlogControllerTest" method="Detail" time="0.0180000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{"detail":{"id":100,"title":"第 99 个测试模型","content":"这是第 99 个模型的内容"}},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
 
 </output>
-        <traits />
+        <traits>
+          <trait name="TestCategory" value="CategoryA" />
+          <trait name="Priority" value="2" />
+        </traits>
       </test>
-      <test name="Ron.XUnitTest.BlogControllerTest.Detail(id: 1)" type="Ron.XUnitTest.BlogControllerTest" method="Detail" time="0.0180000" result="Pass">
-        <output>{"code":0,"message":"成功","data":{},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
+      <test name="Ron.XUnitTest.BlogControllerTest.Detail(id: 1)" type="Ron.XUnitTest.BlogControllerTest" method="Detail" time="0.0130000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{"detail":{"id":1,"title":"第 0 个测试模型","content":"这是第 0 个模型的内容"}},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
 
 </output>
-        <traits />
+        <traits>
+          <trait name="TestCategory" value="CategoryA" />
+          <trait name="Priority" value="2" />
+        </traits>
+      </test>
+      <test name="Ron.XUnitTest.BlogControllerTest.Detail(id: 5)" type="Ron.XUnitTest.BlogControllerTest" method="Detail" time="0.0120000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{"detail":{"id":5,"title":"第 4 个测试模型","content":"这是第 4 个模型的内容"}},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
+
+</output>
+        <traits>
+          <trait name="TestCategory" value="CategoryA" />
+          <trait name="Priority" value="2" />
+        </traits>
+      </test>
+      <test name="Ron.XUnitTest.BlogControllerTest.List" type="Ron.XUnitTest.BlogControllerTest" method="List" time="0.0220000" result="Pass">
+        <output>{"code":0,"message":"成功","data":{"list":[{"id":21,"title":"第 20 个测试模型","content":"这是第 20 个模型的内容"},{"id":22,"title":"第 21 个测试模型","content":"这是第 21 个模型的内容"},{"id":23,"title":"第 22 个测试模型","content":"这是第 22 个模型的内容"},{"id":24,"title":"第 23 个测试模型","content":"这是第 23 个模型的内容"},{"id":25,"title":"第 24 个测试模型","content":"这是第 24 个模型的内容"},{"id":26,"title":"第 25 个测试模型","content":"这是第 25 个模型的内容"},{"id":27,"title":"第 26 个测试模型","content":"这是第 26 个模型的内容"},{"id":28,"title":"第 27 个测试模型","content":"这是第 27 个模型的内容"},{"id":29,"title":"第 28 个测试模型","content":"这是第 28 个模型的内容"},{"id":30,"title":"第 29 个测试模型","content":"这是第 29 个模型的内容"},{"id":31,"title":"第 30 个测试模型","content":"这是第 30 个模型的内容"},{"id":32,"title":"第 31 个测试模型","content":"这是第 31 个模型的内容"},{"id":33,"title":"第 32 个测试模型","content":"这是第 32 个模型的内容"},{"id":34,"title":"第 33 个测试模型","content":"这是第 33 个模型的内容"},{"id":35,"title":"第 34 个测试模型","content":"这是第 34 个模型的内容"},{"id":36,"title":"第 35 个测试模型","content":"这是第 35 个模型的内容"},{"id":37,"title":"第 36 个测试模型","content":"这是第 36 个模型的内容"},{"id":38,"title":"第 37 个测试模型","content":"这是第 37 个模型的内容"},{"id":39,"title":"第 38 个测试模型","content":"这是第 38 个模型的内容"},{"id":40,"title":"第 39 个测试模型","content":"这是第 39 个模型的内容"}]},"content":null,"contenttype":"text/json;charset=utf-8;","statuscode":null}
+
+</output>
+        <traits>
+          <trait name="Priority" value="1" />
+          <trait name="TestCategory" value="CategoryA" />
+        </traits>
       </test>
     </collection>
   </assembly>

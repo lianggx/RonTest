@@ -24,12 +24,7 @@ namespace Ron.XUnitTest
             if (server == null)
                 server = new TestServer(new WebHostBuilder().UseStartup<Startup>());
             httpClient = server.CreateClient();
-            httpClient.DefaultRequestHeaders.Add("token", "66dba5a7e893977bec70d70069762ec706798");
-        }
-
-        public void AddHeaders(string key, string value)
-        {
-            httpClient.DefaultRequestHeaders.Add(key, value);
+            httpClient.DefaultRequestHeaders.Add("token", "66dba5a7e893977b");
         }
 
         public async Task<APIReturn> PostData(string action, dynamic body)
@@ -38,20 +33,18 @@ namespace Ron.XUnitTest
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
             var data = await httpClient.PostAsync(action, content);
             var result = await data.Content.ReadAsStringAsync();
-            output.WriteLine(result);
-            var apiReturn = JsonConvert.DeserializeObject<APIReturn>(result);
+            var resultObj = JsonConvert.DeserializeObject<APIReturn>(result);
 
-            return apiReturn;
+            return resultObj;
         }
 
         public async Task<APIReturn> GetData(string action)
         {
             var data = await httpClient.GetAsync(action);
             var result = await data.Content.ReadAsStringAsync();
-            output.WriteLine(result);
-            var apiReturn = JsonConvert.DeserializeObject<APIReturn>(result);
+            var resultObj = JsonConvert.DeserializeObject<APIReturn>(result);
 
-            return apiReturn;
+            return resultObj;
         }
     }
 }

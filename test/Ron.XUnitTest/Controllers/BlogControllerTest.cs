@@ -13,12 +13,7 @@ namespace Ron.XUnitTest
         {
         }
 
-
-        [Trait("TestCategory", "CategoryA")]
-        [Trait("Priority", "2")]
         [Theory]
-        [InlineData(1)]
-        [InlineData(5)]
         [InlineData(100)]
         public async Task Detail(int id)
         {
@@ -27,12 +22,11 @@ namespace Ron.XUnitTest
             Assert.NotEmpty(result.Data);
         }
 
-        [Trait("Priority", "1")]
-        [Trait("TestCategory", "CategoryA")]
         [Fact]
         public async Task List()
         {
-            var result = await PostData("/api/blog/list/", new { Page = 1, PageSize = 20 });
+            var data = new { Page = 1, PageSize = 20 };
+            var result = await PostData("/api/blog/list/", data);
 
             Assert.NotEmpty(result.Data);
         }
